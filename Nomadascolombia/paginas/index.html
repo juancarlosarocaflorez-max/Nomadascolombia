@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NomadasColombia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo" aria-label="Espacio para el logo">TU<br>LOGO</div>
+      <b>NomadasColombia</b>
+      <a class="quienes" href="#quienes">Quiénes somos</a>
+    </div>
+    <nav aria-label="Principal">
+      <button class="cart" type="button" aria-label="Ver carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/></svg>
+        Carrito <span class="n" id="count">0</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Encuentra tu próximo libro</h1>
+      <p>Tu próxima aventura comienza aquí.</p>
+      <form class="search" role="search" onsubmit="return false" id="searchForm">
+        <input type="search" id="q" placeholder="Escribe un título o autor" aria-label="Buscar libros">
+        <button type="button" id="go">Buscar libros</button>
+      </form>
+    </div>
+
+    <div class="layout">
+      <div class="left">
+        <article class="panel" aria-labelledby="catalogo">
+          <h2 id="catalogo">Catálogo</h2>
+          <div class="books" id="books"></div>
+          <p class="empty" id="empty">No encontramos libros con esa búsqueda. Prueba con otro título o autor.</p>
+        </article>
+
+        <section class="panel" aria-labelledby="top">
+          <h2 id="top">Los más vendidos</h2>
+          <ol class="rank">
+            <li><span>Pendiente para publicar 1</span><b>Autor</b></li>
+            <li><span>Pendiente para publicar 2</span><b>Autor</b></li>
+            <li><span>Pendiente para publicar 3</span><b>Autor</b></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside aria-label="Categorías">
+        <div class="panel">
+          <h2>Categorías</h2>
+          <ul>
+            <li><a href="#catalogo" data-cat=""> Bogotá</a></li>
+            <li><a href="#catalogo" data-cat="Novela"> Medellin</a></li>
+            <li><a href="#catalogo" data-cat="Infantil"> Cartagena</a></li>
+            <li><a href="#catalogo" data-cat="Ciencia">Santa Marta </a></li>
+            <li><a href="#catalogo" data-cat="Historia"> San Andrés</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section id="quienes" class="panel" style="margin-top:1.5rem">
+      <h2>Quiénes somos</h2>
+      <p> NÓMADAS COLOMBIA
+
+Somos una empresa apasionada por el turismo, la aventura y la belleza de nuestro país. En Nómadas Colombia queremos descubrir, explorar y compartir contigo los destinos más maravillosos de Colombia, desde sus playas paradisíacas y montañas imponentes hasta sus pueblos mágicos y lugares llenos de cultura e historia.
+
+Nuestro propósito es inspirarte a viajar, vivir nuevas experiencias y conocer la riqueza natural y cultural que hace de Colombia un país único. 
+
+ Nómadas Colombia: exploramos destinos, creamos experiencias y conectamos contigo a través de la magia de viajar.
+
+ ¡Colombia tiene miles de lugares por descubrir! ¿Te animas a explorarlos con nosotros?</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Páginas NomadasColombia</span>
+    <div class="social">
+      <a class="wa" href="https://wa.me/573215105827" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.200l-.3-.2-3 .8.8-2.9-.2-.3A8.200 8.200 0 1 1 12 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.100l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.500-1.300-3.500-2.900-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-1 2.400.1 1 .5 2 1.100 2.800 1.100 1.600 2.500 2.800 4.200 3.500 1.500.6 2.100.7 2.800.6.500-.1 1.500-.6 1.700-1.200.2-.6.200-1.100.2-1.200-.1-.1-.2-.2-.4-.3z"/></svg>
+      </a>
+      <a class="fb" href="https://www.facebook.com/share/1CpqeYWrP1/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.500 22v-8.200h2.800l.4-3.300h-3.200V8.400c0-.9.300-1.600 1.600-1.600h1.700V3.900c-.3 0-1.300-.1-2.500-.1-2.500 0-4.200 1.500-4.200 4.300v2.400H7.200v3.300h2.900V22h3.400z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var BOOKS=[
+  {t:"Bogotá",a:"Nomadas colombia",c:"Guía de Bogotá",p:"$ 00.000"},
+  {t:"Medellín",a:"Nomadas Colombia",c:"Guia de medellín",p:"$$.000"},
+  {t:"Cartagena ",a:"Nomadas Colombia ",c:"Guia de Cartagena",p:"$00.000"},
+  {t:"Santa Marta ",a:"Nomadas Colombia",c:"Guia de San Marta",p:"$00.000"}
+];
+var count=0,cat="",grid=document.getElementById("books"),empty=document.getElementById("empty"),q=document.getElementById("q");
+function render(){
+  var term=q.value.trim().toLowerCase(),n=0;
+  grid.innerHTML="";
+  BOOKS.forEach(function(b){
+    if(cat&&b.c!==cat)return;
+    if(term&&(b.t+" "+b.a+" "+b.c).toLowerCase().indexOf(term)<0)return;
+    n++;
+    var d=document.createElement("div");d.className="book";
+    d.innerHTML='<div class="cover">Espacio para la portada</div><h3></h3><p class="by"></p><div class="row"><span class="price"></span><button type="button" class="add">Agregar</button></div>';
+    d.querySelector("h3").textContent=b.t;
+    d.querySelector(".by").textContent=b.a+" · "+b.c;
+    d.querySelector(".price").textContent=b.p;
+    d.querySelector(".add").onclick=function(){count++;document.getElementById("count").textContent=count;};
+    grid.appendChild(d);
+  });
+  empty.style.display=n?"none":"block";
+}
+q.addEventListener("input",render);
+document.getElementById("go").onclick=render;
+document.querySelectorAll("aside a").forEach(function(a){
+  a.addEventListener("click",function(){cat=a.getAttribute("data-cat");render();});
+});
+render();
+</script>
+</body>
+</html>
+
